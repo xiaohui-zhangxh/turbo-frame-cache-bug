@@ -1,24 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+how to repro this issue:
 
-Things you may want to cover:
+```
+bin/dev
+```
 
-* Ruby version
+- open `http://localhost:3000/` in browser
+- open browser inspector and check the console output
+- click link `Page1 not in frame`, `Page2 not in frame` and `Page3 not in frame`, `turbo:before-cache` is caching previous page
+- click link `Page1 in frame`, `Page2 in frame` and `Page3 in frame`, `turbo:before-cache` is caching current page
 
-* System dependencies
+## screenshots
 
-* Configuration
+### open http://localhost:3000/
+![image](screenshots/home.png)
 
-* Database creation
+### click `Page1 not in frame`
 
-* Database initialization
+![image](screenshots/page1%20not%20in%20frame.png)
 
-* How to run the test suite
+### click `Page1`
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![image](screenshots/page1%20in%20frame.png)

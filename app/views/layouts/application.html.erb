@@ -12,19 +12,19 @@
 
   <body class="flex">
     <div class="w-80 border-r">
+      <ul>
+        <li><%= link_to 'Home', root_path(in_frame: 'y') %></li>
+        <li><%= link_to 'Page1 not in frame', pages_page1_path(in_frame: 'n') %></li>
+        <li><%= link_to 'Page2 not in frame', pages_page2_path(in_frame: 'n') %></li>
+        <li><%= link_to 'Page3 not in frame', pages_page3_path(in_frame: 'n') %></li>
+      </ul>
       <turbo-frame target="main_frame">
         <ul>
-          <li><%= link_to 'Home', root_path(in_frame: 'y') %></li>
           <li><%= link_to 'Page1', pages_page1_path(in_frame: 'y') %></li>
           <li><%= link_to 'Page2', pages_page2_path(in_frame: 'y') %></li>
           <li><%= link_to 'Page3', pages_page3_path(in_frame: 'y') %></li>
         </ul>
       </turbo-frame>
-      <ul>
-        <li><%= link_to 'Page1 not in frame', pages_page1_path(in_frame: 'n') %></li>
-        <li><%= link_to 'Page2 not in frame', pages_page2_path(in_frame: 'n') %></li>
-        <li><%= link_to 'Page3 not in frame', pages_page3_path(in_frame: 'n') %></li>
-      </ul>
     </div>
     <div>
       <%= yield %>
