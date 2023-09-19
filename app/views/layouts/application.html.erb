@@ -16,7 +16,7 @@
         <div x-data="{show: false}">
           <div @click="show=!show">Menu</div>
           <template x-teleport="#x-teleport-target">
-            <ul x-ref="popper" :class="!show && 'hidden'" class="fixed border-4 p-4 left-20 top-5 bg-slate-200">
+            <ul data-turbo-temporary x-ref="popper" :class="!show && 'hidden'" class="fixed border-4 p-4 left-20 top-5 bg-slate-200">
               <li>Menu one</li>
               <li>Menu two</li>
             </ul>
