@@ -126,7 +126,6 @@ GEM
     nio4r (2.5.9)
     nokogiri (1.15.4-x86_64-darwin)
       racc (~> 1.4)
-    pg (1.5.4)
     propshaft (0.7.0)
       actionpack (>= 7.0.0)
       activesupport (>= 7.0.0)
@@ -182,6 +181,7 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    sqlite3 (1.6.2-x86_64-darwin)
     stimulus-rails (1.2.2)
       railties (>= 6.0.0)
     stringio (3.0.8)
@@ -219,12 +219,12 @@ DEPENDENCIES
   cssbundling-rails
   debug
   jsbundling-rails
-  pg (~> 1.1)
   propshaft
   puma (~> 5.0)
   rails (~> 7.0.7)
   redis (~> 4.0)
   selenium-webdriver
+  sqlite3 (~> 1.4)
   stimulus-rails
   turbo-rails
   tzinfo-data
