@@ -1,5 +1,7 @@
 // Entry point for the build script in your package.json
 import "@hotwired/turbo-rails"
+import Alpine from "alpinejs"
+Alpine.start()
 import "./controllers"
 
 document.addEventListener("turbo:before-visit", () => { console.log("turbo:before-visit") })
@@ -18,4 +20,8 @@ document.addEventListener("turbo:fetch-request-error", () => { console.log("turb
 
 document.addEventListener("turbo:before-cache", (event) => {
   console.log("turbo:before-cache h1->", document.querySelector("h1").textContent)
+})
+
+document.addEventListener("turbo:before-render", (event) => {
+  console.log("turbo:before-render h1->", event.detail.newBody.querySelector("h1").textContent)
 })
